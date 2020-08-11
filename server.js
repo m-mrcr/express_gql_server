@@ -9,13 +9,13 @@ var schema = buildSchema(`
 `);
 
 var root = {
-  message: () => 'Hello World'
+    message: () => 'Hello World!'
 };
 
-var app = express;
+var app = express();
 app.use('/graphql', graphqlHTTP({
-  schema: schema,
-  rootValue: root,
-  graphiql: true
+    schema: schema,
+    rootValue: root,
+    graphiql: true
 }));
 app.listen(4000, () => console.log('Express GraphQL Server Now Running On localhost:4000/graphql'));
