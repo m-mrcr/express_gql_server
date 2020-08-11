@@ -7,3 +7,8 @@ var schema = buildSchema(`
         message: String
     }
 `);
+
+var root = {
+  message: () => 'Hello World'
+};
+
